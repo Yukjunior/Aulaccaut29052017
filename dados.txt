@@ -1,0 +1,87 @@
+
+public class AUla {
+
+	public static void main(String[] args) {
+		
+
+		Macaco m = new Macaco();
+		Cobra c = new Cobra();
+		Zebra z = new Zebra();
+		
+		System.out.println(m.peso);
+		System.out.println(c.peso);
+		System.out.println(z.peso);
+		z.mamar();
+		c.comer();
+		System.out.println(z.peso);
+		System.out.println(c.peso);
+	}
+
+}
+
+
+
+
+public class Macaco extends Mami{
+	
+	public Macaco() {
+		peso=0.1;
+	}
+
+
+
+}
+
+
+
+
+
+public class Cobra extends Animal{
+	
+	
+	public Cobra(){
+		peso = 0.2;
+	}
+	
+}
+
+
+
+
+
+public class Zebra extends Mami {
+	
+	public Zebra(){
+		peso = 0.5;
+	}
+}
+
+
+
+
+
+
+
+
+public class Animal {
+
+	double peso;
+	
+	public void comer (){
+		peso++;
+	}
+}
+
+
+
+
+
+
+
+
+public class Mami extends Animal {
+
+	public void mamar() {
+		peso++;
+	}
+}
